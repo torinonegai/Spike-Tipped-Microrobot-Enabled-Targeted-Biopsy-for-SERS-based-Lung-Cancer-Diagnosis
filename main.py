@@ -7,7 +7,7 @@ from train_model import train_loop, test_loop
 from plot_trainingprogress import update_training_plot, finish_plot
 from torch.optim.lr_scheduler import ExponentialLR
 
-""" 数据导入 """
+""" Load Data """
 train_dataset = RamanDataset("data/train_data.txt","data/train_label.txt")
 test_dataset = RamanDataset("data/test_data.txt","data/test_label.txt")
 '''
@@ -19,7 +19,7 @@ train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=128, sh
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=1000, shuffle=True)
 
 
-""" 参数设置 """
+""" Parameters """
 device = "cuda"
 model = NeuralNetwork().to(device)
 learning_rate = 1e-3
@@ -28,8 +28,7 @@ optimizer = torch.optim.Adma(model.parameters(), lr=learning_rate, weight_decay=
 scheduler = ExponentialLR(optimizer, gamma=0.95)
 epochs = 200
 
-""" 训练 """
-time_start_1 = time.time()
+""" Training """
 train_loss, train_accuracy = test_loop(train_dataloader, model, loss_fn, device)
 test_loss, test_accuracy = test_loop(test_dataloader, model, loss_fn, device)
 update_training_plot(0,train_loss, train_accuracy,test_loss, test_accuracy,50)
@@ -40,11 +39,10 @@ for t in range(1, epochs+1):
     test_loss, test_accuracy = test_loop(test_dataloader, model, loss_fn, device)
     update_training_plot(t,train_loss, train_accuracy,test_loss, test_accuracy,50)
     scheduler.step()
-time_end_1 = time.time()
 test_loss, test_accuracy = test_loop(test_dataloader, model, loss_fn, device)
 #print("train:", train_loss, train_accuracy)
 print("test:", test_loss, test_accuracy)
-print("Done!\r\n",f"Total running time of the script: {time_end_1-time_start_1}s")
+
 finish_plot();
 
 torch.save(model, 'tmp.pth')
