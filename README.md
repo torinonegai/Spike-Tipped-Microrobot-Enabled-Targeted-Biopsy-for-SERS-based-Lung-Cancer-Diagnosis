@@ -11,9 +11,7 @@ The code has been tested with the following versions of software dependencies:
 - **Matplotlib**: 3.9.0
 - **Scikit-learn**: 1.5.0
 - **Captum**: 0.7.0 *(used for model attribution analysis)*
-
-For attribution analysis, captum 0.7.0 is used.
 ## Run this code
 * To quickly test the model with provided test data, simply run the `test.py`.
 * For training the model and conducting attribution analysis, 
-run the training process with `main.py` and Perform attribution analysis with `attibution.py`
+run the training process with `main.py` and perform attribution analysis with `attibution.py`
