@@ -1,7 +1,7 @@
 # Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
 This repository contains code and test data in following work:
 
-"Spike-Tipped Microrobot Enabled Targeted Biopsy for SERS-based Lung Cancer Diagnosis", (In review)
+"Spike-Tipped Microrobot Enabled Targeted Biopsy for SERS-based Lung Cancer Diagnosis",  (In review)
 ## Requirements
 The code has been tested with the following versions of software dependencies:
 

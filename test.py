@@ -6,11 +6,10 @@ from sklearn.metrics import confusion_matrix
 
 model = torch.load('model.pth', weights_only=False)
 model.eval()
+device = "cuda"
 
 test_dataset = RamanDataset("data/test_data.txt","data/test_label.txt")
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=True)
-
-device = "cuda"
 
 y_true = []
 y_pred = []

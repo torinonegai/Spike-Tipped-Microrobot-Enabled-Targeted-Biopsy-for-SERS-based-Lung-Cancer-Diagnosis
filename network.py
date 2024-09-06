@@ -14,12 +14,9 @@ class NeuralNetwork(nn.Module):
             nn.ReLU(),
         )
         self.flatten = nn.Flatten()
-        # classifier is just a name for linear layers
         self.classifier = nn.Sequential(
-            # nn.Dropout(p=0.5),
             nn.Linear(in_features=16128, out_features=512),
             nn.ReLU(),
-            # nn.Dropout(p=0.5),
             nn.Linear(in_features=512, out_features=512),
             nn.ReLU(),
             nn.Linear(in_features=512, out_features=5),

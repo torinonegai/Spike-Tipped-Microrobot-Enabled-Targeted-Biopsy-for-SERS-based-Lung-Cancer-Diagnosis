@@ -30,7 +30,6 @@ def update_training_plot(epoch, train_loss, train_accuracy, test_loss, test_accu
     # Only update the plot every 'refresh_rate' epochs
     if epoch % refresh_rate == 0:
         plt.clf()  # Clear the current figure
-
         # Plotting training and test losses
         plt.subplot(2, 1, 1)
         plt.plot(range(1, len(train_losses) + 1), train_losses, 'ro-', label='Training Loss')

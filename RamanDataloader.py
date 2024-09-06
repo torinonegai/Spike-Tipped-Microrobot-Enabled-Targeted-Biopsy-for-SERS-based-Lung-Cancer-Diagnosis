@@ -9,7 +9,7 @@ class RamanDataset(Dataset):
         self.target_transform = target_transform
 
     def __len__(self):
-        return np.size(self.label,0)
+        return np.size(self.label, 0)
 
     def __getitem__(self, idx):
         data = torch.unsqueeze(torch.from_numpy(self.data[idx,:]),0)
