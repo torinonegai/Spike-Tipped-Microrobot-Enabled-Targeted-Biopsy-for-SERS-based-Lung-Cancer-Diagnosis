@@ -33,8 +33,7 @@ for t in range(1, epochs+1):
     update_training_plot(t,train_loss, train_accuracy,test_loss, test_accuracy,50)
     scheduler.step()
 test_loss, test_accuracy = test_loop(test_dataloader, model, loss_fn, device)
-#print("train:", train_loss, train_accuracy)
-print("Final test loss:", test_loss,"\n","Final test accuracy:",test_accuracy)
+print("Test loss:", test_loss,"\n","Test accuracy:",test_accuracy)
 
 finish_plot();
 torch.save(model, 'tmp.pth')

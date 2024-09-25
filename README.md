@@ -1,12 +1,16 @@
 # Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
-## Instructions
+## Overview
 This repository contains code and test data in following work:
 
-"Spike-Tipped Microrobot Enabled Targeted Biopsy for SERS-based Lung Cancer Diagnosis",  (In review)
+**"Spike-Tipped Microrobot Enabled Targeted Biopsy for SERS-based Lung Cancer Diagnosis"**  
+*(Manuscript currently under review)*
 
-All of the test set and a demo train set is uploaded.
+The repository includes a full test set and a demo training set to demonstrate the functionality of the code.
+
 ## System Requirements
-The code has been tested on Linux operating systems, with the following versions of software dependencies:
+
+The code has been tested on the following system configuration:
+
 - **OS**: Ubuntu 22.04.3 LTS
 - **Python**: 3.10.12
 - **PyTorch**: 2.4.0
@@ -14,24 +18,27 @@ The code has been tested on Linux operating systems, with the following versions
 - **Matplotlib**: 3.9.0
 - **Scikit-learn**: 1.5.0
 - **Captum**: 0.7.0 *(used for model attribution analysis)*
+
 ## Installation guide
-First install the dependencies software:
-```
+
+First, install the required dependencies by running the following command:
+```bash
 pip3 install -r requirements.
 ```
-Then clone the repository:
+Then clone this repository:
 ```
 git clone https://github.com/torinonegai/Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis.git
 ```
-Congratulations! Now the code is ready for running. The Typical install time is about **15-30 minutes**.
+Congratulations! After these steps, the is should be ready to run.  Installation typically takes **15-30 minutes** depending on your system. 
 ## Run this code
-* To quickly test the model with provided test data, simply run the `test.py`.
+
+To quickly test the model with provided test data, simply run the `test.py`:
 ```
 cd Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
 python3 test.py
 ```
-Typically, the time for collecting and analyzing a spectra is about **3 minutes**.
-The output is the confusion matrix alone with the average accuracy like 
+Approximately 3 minutes are required for collecting and analyzing each spectrum.
+The output will include a confusion matrix and the average accuracy of the model, like:
 ```
 [[0.81675393 0.         0.0104712  0.17277487 0.        ]
  [0.         0.99459459 0.         0.00540541 0.        ]
@@ -41,12 +48,18 @@ The output is the confusion matrix alone with the average accuracy like
 
 Average accuracy: 0.9428868120456906
 ```
-* For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`
+For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`
 
-Train with the demo train set:
+The output will include a model saved as "tmp.pth" along with test loss and accuracy, like:
 ```
 python3 main.py
 ```
+The output model will be saved as `tmp.pth` and the test loss and accuracy will be output like:
+```
+Test loss: 0.2718150317668915 
+Test accuracy: 0.8805815160955348
+```
+Note: To use your own dataset, modify lines 9 and 10 in `main.py` to point to the appropriate dataset filenames.
 ## License
 
-This project is covered under the Apache 2.0 License.
+This project is covered under the **Apache 2.0 License**.
