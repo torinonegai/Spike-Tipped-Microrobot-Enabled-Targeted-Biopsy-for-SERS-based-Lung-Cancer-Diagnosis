@@ -38,7 +38,15 @@ The output is the confusion matrix alone with the average accuracy like
  [0.01327434 0.01769912 0.96017699 0.00884956 0.        ]
  [0.         0.         0.00625    0.9875     0.00625   ]
  [0.00497512 0.         0.         0.03482587 0.960199  ]]
- 
+
 Average accuracy: 0.9428868120456906
 ```
 * For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`
+
+Train with the demo train set:
+```
+python3 main.py
+```
+## License
+
+This project is covered under the Apache 2.0 License.

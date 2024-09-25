@@ -51,12 +51,6 @@ def update_training_plot(epoch, train_loss, train_accuracy, test_loss, test_accu
         plt.tight_layout()
         plt.pause(0.1)  # Pause for a short period to update the plot
 
-        print("epoch:", epoch)
-        print("train:", train_loss, train_accuracy)
-        print("test:", test_loss, test_accuracy)
-        print(train_losses)
-        print(train_accuracies)
-
 def finish_plot():
     plt.ioff()  # Turn off the interactive mode
     plt.savefig("training progress.png")
