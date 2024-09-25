@@ -21,11 +21,24 @@ pip3 install -r requirements.
 ```
 Then clone the repository:
 ```
-git clone
+git clone https://github.com/torinonegai/Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis.git
 ```
-Congratulations! Now the code is ready for running.
-Typical install time is about 15-30min
+Congratulations! Now the code is ready for running. The Typical install time is about **15-30 minutes**.
 ## Run this code
 * To quickly test the model with provided test data, simply run the `test.py`.
-* For training the model and conducting attribution analysis, 
-run the training process with `main.py` and perform attribution analysis with `attibution.py`
+```
+cd Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
+python3 test.py
+```
+Typically, the time for collecting and analyzing a spectra is about **3 minutes**.
+The output is the confusion matrix alone with the average accuracy like 
+```
+[[0.81675393 0.         0.0104712  0.17277487 0.        ]
+ [0.         0.99459459 0.         0.00540541 0.        ]
+ [0.01327434 0.01769912 0.96017699 0.00884956 0.        ]
+ [0.         0.         0.00625    0.9875     0.00625   ]
+ [0.00497512 0.         0.         0.03482587 0.960199  ]]
+ 
+Average accuracy: 0.9428868120456906
+```
+* For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`

@@ -24,5 +24,5 @@ with torch.no_grad():
 
 conf_matrix_ = confusion_matrix(y_true, y_pred, normalize="true")
 accuracy = np.sum(np.array(y_true) == np.array(y_pred)) / len(y_true)
-print(conf_matrix_)
-print(accuracy)
+print(conf_matrix_,"\n")
+print("Average accuracy: ", accuracy)
