@@ -29,7 +29,7 @@ Then clone this repository:
 ```
 git clone https://github.com/torinonegai/Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis.git
 ```
-Congratulations! After these steps, the is should be ready to run.  Installation typically takes **15-30 minutes** depending on your system. 
+Congratulations! After these steps, the code is ready to run.  Installation typically takes **15-30 minutes** depending on your system. 
 ## Run this code
 
 To quickly test the model with provided test data, simply run the `test.py`:
@@ -37,7 +37,7 @@ To quickly test the model with provided test data, simply run the `test.py`:
 cd Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
 python3 test.py
 ```
-Approximately 3 minutes are required for collecting and analyzing each spectrum.
+Approximately **3 minutes** are required for collecting and analyzing each spectrum.
 The output will include a confusion matrix and the average accuracy of the model, like:
 ```
 [[0.81675393 0.         0.0104712  0.17277487 0.        ]
@@ -48,13 +48,13 @@ The output will include a confusion matrix and the average accuracy of the model
 
 Average accuracy: 0.9428868120456906
 ```
-For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`
+For training the model and conducting attribution analysis, run the training process with `main.py` and perform attribution analysis with `attibution.py`.
 
-The output will include a model saved as "tmp.pth" along with test loss and accuracy, like:
-```
+To train the model  with the demo training set:
+```bash
 python3 main.py
 ```
-The output model will be saved as `tmp.pth` and the test loss and accuracy will be output like:
+The output will include a model saved as `tmp.pth` along with test loss and accuracy, like:
 ```
 Test loss: 0.2718150317668915 
 Test accuracy: 0.8805815160955348
