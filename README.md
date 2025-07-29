@@ -1,8 +1,8 @@
-# Spike-Tipped-Microrobot-Enabled-Targeted-Biopsy-for-SERS-based-Lung-Cancer-Diagnosis
+# Magnetic Microrobot with Drilling-Sensing Dual Functionality for Targeted Biopsy of Deep-Seated Tracheal Microlesions
 ## Overview
 This repository contains code and test data in following work:
 
-**"Spike-Tipped Microrobot Enabled Targeted Biopsy for SERS-based Lung Cancer Diagnosis"**  
+**"Magnetic Microrobot with Drilling-Sensing Dual Functionality for Targeted Biopsy of Deep-Seated Tracheal Microlesions"**  
 *(Manuscript currently under review)*
 
 The repository includes a full test set and a demo training set to demonstrate the functionality of the code.
